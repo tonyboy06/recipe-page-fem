@@ -19,6 +19,7 @@
     --Rose400: #f3e5d8;
 }
 
+
 body {
     background-color: var(--Rose400);
     font-family: "Outfit", sans-serif;
@@ -31,7 +32,9 @@ h1, h2 {
     font-style: normal;
 }
 
-
+h2 {
+    color: var(--Brown800);
+}
 
 p {
     color: var(--Stone600);
@@ -47,10 +50,11 @@ main {
 .card {
     background-color: var(--White);
     border-radius: 20px;
-    margin: 70px 0 40px 0;
-    padding: 35px;
-    width: 700px;
+    margin: 150px 0 40px 0;
+    padding: 30px;
+    max-width: 700px;
 }
+
 
 .omelette__image {
     width: 100%;
@@ -60,6 +64,7 @@ main {
 .card__header h1 {
     font-size: 36px;
     margin: 20px 0 10px 0;
+    font-weight: 600;
 }
 
 .card__header p {
@@ -77,37 +82,73 @@ main {
     color: var(--Rose800);
 }
 
-.bold {
-    color: var(--Stone900);
-    font-weight: 600;
-}
 
 .list__items {
     margin: 10px 0 10px 30px;
-    list-style-type: disc;
     color: var(--Stone600);
     padding-left: 20px;
 }
 
-.ol {
-    list-style-type: decimal;
+::marker {
+    color: var(--Brown800);
+    font-weight: 600;
 }
 
-.card__ingredients, .card__instructions, .card__nutritions {
+.card__nutritions p {
+    margin: 15px 0;
+}
+
+.card__ingredients, .card__instructions {
     margin: 20px 0;
     padding-bottom: 10px;
     border-bottom: 1px solid var(--Stone150);
 }
 
-
-
-
-
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
+table {
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 500;
 }
-    
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+
+td:nth-child(even) {
+    color: var(--Brown800);
+    font-weight: 600;
+    padding: 10px 150px;
+}
+
+td {
+    color: var(--Stone600);
+    text-align: left;
+    border-bottom: 1px solid var(--Stone150);
+    padding: 10px 40px;
+}
+
+tr:last-child td {
+    border: none;
+}
+
+@media only screen and (max-width: 470px) {
+    .omelette__image {
+        padding: 0;
+        border-radius: 0;
+    }
+
+    main {
+        display: block;
+        background: white;
+    }
+
+    .card {
+        border-radius: 0;
+        margin: 0;
+        padding: 0px;
+    }
+
+    section {
+        padding: 5px 20px;
+    }
+
+    td:nth-child(even) {
+        padding: 10px 50px;
+    }
 }
